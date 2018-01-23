@@ -1,3 +1,13 @@
+// Gentable is a program for generating a fast lookup table for the Grapheme_Cluster_Break property of Unicode runes.
+// It constructs a sorted slice of (half-open) ranges, each of which is mapped to a property value; the first slice is
+// intended to be searched using binary search.
+// It takes the GraphemeBreakProperty.txt file from UCD as input and prints to standard output a Go source file defining
+// two slices with the same size, one named "ranges" and the other "categories", containing the ranges and the corresponding
+// property values in the same order. It also defines named constants for each property value, matching the names from
+// the input file.
+//
+// The latest version of the appropriate input file can be found at:
+// http://www.unicode.org/Public/UCD/latest/ucd/auxiliary/GraphemeBreakProperty.txt
 package main
 
 import (

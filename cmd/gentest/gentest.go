@@ -1,3 +1,9 @@
+// Gentest is a program for generating a test case table from the Unicode database's grapheme cluster segmentation tests.
+// The tool takes in the UCD GraphemeBreakTest.txt file as input and prints to standard output a Go source file which
+// defines a unicodeTestCases slice describing these tests to standard output.
+//
+// The latest version of this tool's input file may be found at:
+// http://www.unicode.org/Public/UCD/latest/ucd/auxiliary/GraphemeBreakTest.txt
 package main
 
 import (
