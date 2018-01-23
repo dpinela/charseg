@@ -2,11 +2,11 @@ package main
 
 import (
 	"bufio"
-	"os"
 	"fmt"
 	"io"
-	"strings"
+	"os"
 	"strconv"
+	"strings"
 	"unicode/utf8"
 )
 

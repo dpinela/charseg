@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"sort"
 	"strconv"
 	"strings"
-	"sort"
 	"unicode"
 )
 
@@ -99,7 +99,7 @@ func main() {
 
 type runeRange struct {
 	Begin, End rune
-	Category int8
+	Category   int8
 }
 
 // Numeric base used to represent runes in the data files.
