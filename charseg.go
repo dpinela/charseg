@@ -1,4 +1,7 @@
 // Package charseg implements Unicode grapheme cluster segmentation.
+//
+// The segmentation rules are as defined by Unicode Standard Annex 29:
+// https://unicode.org/reports/tr29/
 package charseg
 
 import (
@@ -18,9 +21,10 @@ type segmenter struct {
 	numRISymbols                int
 }
 
-func NextBoundary(text string, atEOF bool) int {
+// FirstGraphemeCluster returns the first grapheme cluster in a string.
+func FirstGraphemeCluster(text string) string {
 	var seg segmenter
-	return seg.NextBoundary(text, atEOF)
+	return text[:seg.NextBoundary(text, true)]
 }
 
 func (s *segmenter) NextBoundary(text string, atEOF bool) int {

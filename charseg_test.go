@@ -6,7 +6,7 @@ import (
 )
 
 type testCase struct {
-	in string
+	in  string
 	out []string
 }
 
@@ -19,9 +19,9 @@ var specialTestCases = []testCase{
 func segment(s string) []string {
 	var segments []string
 	for len(s) > 0 {
-		i := NextBoundary(s, true)
-		segments = append(segments, s[:i])
-		s = s[i:]
+		p := FirstGraphemeCluster(s)
+		segments = append(segments, p)
+		s = s[len(p):]
 	}
 	return segments
 }
