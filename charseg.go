@@ -1,5 +1,7 @@
 // Package charseg implements Unicode grapheme cluster segmentation.
 //
+// A grapheme cluster is what end-users generally perceive as a "character", which may be composed of more than one Unicode codepoint.
+//
 // The segmentation rules are as defined by Unicode Standard Annex 29:
 // https://unicode.org/reports/tr29/
 package charseg
