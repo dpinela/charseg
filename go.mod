@@ -1,1 +1,1 @@
-github.com/dpinela/charseg
+module github.com/dpinela/charseg
